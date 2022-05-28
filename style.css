@@ -1,0 +1,26 @@
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.countainer {
+    display: flex;
+    justify-content: center;
+    color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    border: 1px solid aqua;
+}
+
+* {
+    background-color: black;
+}
+
+.city {
+    color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    border: 1px solid aqua;
+}
