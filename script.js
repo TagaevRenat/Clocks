@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => setInterval(checkCityTime, 1
 let h = document.querySelector('.h')
 let m = document.querySelector('.m')
 let s = document.querySelector('.s')
+let ampm = document.querySelector('.am')
 
 
 function checkCityTime() {
@@ -16,11 +17,13 @@ function checkCityTime() {
 }
 
 function setDate(hours, minutes, seconds) {
-    if (hours < 10) {
-        h.innerHTML = '0' + hours + ':'
+    if (hours > 12) {
+        h.innerHTML = '0' + (hours - 12) + ':'
+        ampm.innerHTML = 'PM'
     }
-    if (hours > 10) {
-        h.innerHTML = hours + ':'
+    if (hours < 12) {
+        h.innerHTML = '0' + hours + ':'
+        ampm.innerHTML = 'AM'
     }
     if (minutes < 10) {
         m.innerHTML = '0' + minutes + ':'
@@ -34,6 +37,7 @@ function setDate(hours, minutes, seconds) {
     if (seconds > 10) {
         s.innerHTML = seconds
     }
+
 }
 
 
