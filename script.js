@@ -21,8 +21,12 @@ function setDate(hours, minutes, seconds) {
         h.innerHTML = '0' + (hours - 12) + ':'
         ampm.innerHTML = 'PM'
     }
-    if (hours < 12) {
+    if (hours < 10) {
         h.innerHTML = '0' + hours + ':'
+        ampm.innerHTML = 'AM'
+    }
+    if (hours > 10 && hours < 12) {
+        h.innerHTML = hours + ':'
         ampm.innerHTML = 'AM'
     }
     if (minutes < 10) {
